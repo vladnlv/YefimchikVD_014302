@@ -1,0 +1,37 @@
+
+.carousel {
+    text-align: start;
+
+    &__prev, &__next {
+        top: 50%;
+        transform: translate(-50%,-50%);
+        color: $carousel-buttons-color;
+        background-color: #ffffff;
+        opacity: 1;
+        box-shadow: 0 0 20px $default-box-shadow-color;
+        border-radius: $border-radius-carousel-buttons;
+        padding: 10px;
+        transition: all linear $default-fast-transition;
+
+        &:focus-visible {
+            outline: none;
+        }
+
+        &--disabled {
+            display: none;
+        }
+
+        &:hover {
+            color: #000000;
+            box-shadow: 0 0 40px $default-box-shadow-color;
+        }
+    }
+
+    &__prev {
+        left: 20px;
+    }
+
+    &__next {
+        right: -30px;
+    }
+}
